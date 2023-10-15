@@ -44,3 +44,17 @@ gce_model_trained<- update_gce_model(gce_model_init, epochs = epochs, n_minibatc
                                      n_neg_samples = n_neg_samples, alpha_learn = alpha_learn, trace_indices = 1:500)
 
 ```
+
+checking training process
+
+```{r, include = FALSE}
+plot(gce_model_trained$log_lkhd, type = "l")
+```
+
+extract embedding vectors, context vectors
+
+```{r, include = FALSE}
+gce_model_trained$var_params$phi
+gce_model_trained$var_params$alpha
+```
+
